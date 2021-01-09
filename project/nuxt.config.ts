@@ -47,6 +47,6 @@ const nuxtConfig: NuxtConfig = {
       },
     },
   },
-  // srcDir: 'src/'
+  srcDir: 'src/'
 }
 module.exports = nuxtConfig
