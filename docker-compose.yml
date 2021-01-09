@@ -1,0 +1,18 @@
+version: '3'
+services:
+  front:
+    # Dockerfileの場所
+    build: 
+        context: ./
+        dockerfile: ./Dockerfile
+    tty: true
+    container_name: front
+    working_dir: /nuxt-initiation/project
+    # ホストOSとコンテナ内でソースコードを共有する
+    volumes:
+      - ./project:/nuxt-initiation/project
+    # コンテナ内部の3000を外部から5000でアクセスする
+    ports:
+      - 5000:3000
+    environment:
+      - HOST=0.0.0.0
